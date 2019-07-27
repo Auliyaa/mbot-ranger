@@ -55,7 +55,20 @@ void color_loop();
 
 void loop()
 {
-  color_loop();
+  static int i=0;
+  if (i<1000)
+  {
+    i++;
+    color_loop();
+  }
+  else
+  {
+    for (uint8_t t = 0; t < LEDNUM; t++ )
+    {
+      led.setColorAt( t, 0,0,0);
+    }
+    led.show();
+  }
 }
 
 void color_loop()
