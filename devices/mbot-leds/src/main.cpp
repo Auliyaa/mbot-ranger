@@ -12,7 +12,7 @@ void setup()
   // Resets all colors on the LED ring
   // Note: For some reason, when working while tue board is plugged-in via USB, the LED 1 keeps showing as green.
   // Un-plugging and re-plugging the board fixes the issue.
-  leds.set_color(0, 0, 0);
+  leds.clear();
   leds.apply();
 }
 
@@ -24,6 +24,9 @@ void hsv_mode_loop();
 
 void loop()
 {
+  // Uncomment this to simply turn off the led ring.
+  return;
+
   if (hsv_mode)
   {
     // HSV mode: Change the hue of each LED independently

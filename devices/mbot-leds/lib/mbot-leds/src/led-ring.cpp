@@ -152,3 +152,10 @@ void led_ring_t::apply()
 {
   _device.show();
 }
+
+void led_ring_t::clear()
+{
+  // Avoids a weird issue with the LED ring where 1 led stays green if we only apply 0,0,0 to all LEDs.
+  set_color(1,0,0);
+  set_color(0,0,0);
+}

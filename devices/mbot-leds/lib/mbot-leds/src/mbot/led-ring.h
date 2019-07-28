@@ -120,6 +120,12 @@ namespace mbot
       * Sends all color changes applied through the set_color() methods calls since the last apply() call.
       */
     void apply();
+
+    /**
+      * Clear any colors and turn off all LEDs.
+      * Note: You still need to call apply for this jto take effect.
+      */
+    void clear();
   };
 }
 
