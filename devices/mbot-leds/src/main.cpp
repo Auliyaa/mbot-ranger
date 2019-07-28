@@ -17,7 +17,7 @@ void setup()
 }
 
 // Set this to true to use the HSV colorspace instead of RGB
-bool hsv_mode{true};
+bool hsv_mode{false};
 
 void rgb_mode_loop();
 void hsv_mode_loop();
@@ -25,7 +25,7 @@ void hsv_mode_loop();
 void loop()
 {
   // Uncomment this to simply turn off the led ring.
-  return;
+  // return;
 
   if (hsv_mode)
   {
@@ -49,7 +49,7 @@ void hsv_mode_loop()
   static const uint8_t v = 100;
   static uint16_t h = random(361);
 
-  leds.set_color(idx, mbot::led_ring_t::hsv_t{h, s, v});
+  leds.set_color(idx, mbot::hsv_t{h, s, v});
   h+=random(30);
   if (h > 360)
   {
