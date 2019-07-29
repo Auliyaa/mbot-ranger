@@ -19,7 +19,6 @@ namespace mbot
 #define MBOT_SPEED_SLOW 100
 #define MBOT_SPEED_MID 200
 #define MBOT_SPEED_FAST 300
-#define MBOT_SPEED_TURBO 400
 
 class vehicle_t
 {
@@ -29,11 +28,7 @@ public:
     forward,
     backwards,
     left,
-    right,
-    slow_left,
-    slow_right,
-    backwards_left,
-    backwards_right
+    right
   };
 
   vehicle_t(uint8_t slot_right=MBOT_RIGHT_MOTOR_SLOT, uint8_t slot_left=MBOT_LEFT_MOTOR_SLOT);
@@ -51,10 +46,15 @@ public:
   inline int16_t speed_right() const { return _speed_right; }
   inline int16_t speed_left() const { return _speed_left; }
 
+  void shift_speed_right(int16_t s);
+  void shift_speed_left(int16_t s);
+
   void apply_direction(direction_t d);
 
   void start();
   void stop();
+
+  inline void apply() { start(); }
 
 private:
   mbot::motor_t _right;

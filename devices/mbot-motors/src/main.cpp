@@ -11,21 +11,29 @@ void setup()
 
 void loop()
 {
-  v.apply_direction(mbot::vehicle_t::direction_t::forward);
-  v.start();
-  delay(1000);
+  static bool first{true};
 
-  v.apply_direction(mbot::vehicle_t::direction_t::backwards);
-  v.start();
-  delay(1000);
+  if (first)
+  {
+    first = false;
 
-  v.apply_direction(mbot::vehicle_t::direction_t::left);
-  v.start();
-  delay(1000);
+    v.apply_direction(mbot::vehicle_t::direction_t::forward);
+    v.start();
+    delay(1000);
 
-  v.apply_direction(mbot::vehicle_t::direction_t::right);
-  v.start();
-  delay(1000);
+    v.apply_direction(mbot::vehicle_t::direction_t::backwards);
+    v.start();
+    delay(1000);
 
-  v.stop();
+    v.apply_direction(mbot::vehicle_t::direction_t::left);
+    v.start();
+    delay(1000);
+
+    v.apply_direction(mbot::vehicle_t::direction_t::right);
+    v.start();
+    delay(1000);
+
+    v.stop();
+  }
+
 }

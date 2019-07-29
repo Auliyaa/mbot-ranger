@@ -20,15 +20,25 @@ void vehicle_t::apply_direction(mbot::vehicle_t::direction_t d)
       _speed_right =  abs(_speed_right);
       _speed_left  = -abs(_speed_left);
       break;
-    case direction_t::left:
-      _speed_right = -abs(_speed_right);
-      _speed_left  = -abs(_speed_left);
-      break;
     case direction_t::right:
       _speed_right =  abs(_speed_right);
       _speed_left  =  abs(_speed_left);
       break;
+    case direction_t::left:
+      _speed_right = -abs(_speed_right);
+      _speed_left  = -abs(_speed_left);
+      break;
   }
+}
+
+void vehicle_t::shift_speed_right(int16_t s)
+{
+  _speed_right += s;
+}
+
+void vehicle_t::shift_speed_left(int16_t s)
+{
+  _speed_left += s;
 }
 
 void vehicle_t::start()
