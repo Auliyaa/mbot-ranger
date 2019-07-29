@@ -1,6 +1,11 @@
 #ifndef _MBOT_BUZZER_TONES_H_
 #define _MBOT_BUZZER_TONES_H_
 
+/*
+  * Frequency (in Hz) of some tones.
+  * Source: http://pages.mtu.edu/~suits/notefreqs.html
+  */
+  
 #define TONE_C0 16
 #define TONE_C_SHARP0 17
 #define TONE_D0 18

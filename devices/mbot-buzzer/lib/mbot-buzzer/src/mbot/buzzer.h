@@ -3,6 +3,11 @@
 
 #include <MeBuzzer.h>
 
+/**
+  * By default on the mBot ranger, the buzzer is connected to the pin #45
+  */
+#define MBOT_BUZZER_PIN 45
+
 namespace mbot
 {
 
@@ -19,7 +24,7 @@ public:
     * Opens the buzzer connected to the specified pin.
     * By default, the buzzer of the Auriga board is located on the pin 45.
     */
-  bool open(int port=45);
+  bool open(int port=MBOT_BUZZER_PIN);
 
   /**
     * Plays a given tone during a given number of milliseconds and returns afterwards.
