@@ -1,19 +1,31 @@
 #include <MeAuriga.h>
 
-MeDCMotor dc;
+#include <mbot/vehicle.h>
+
+mbot::vehicle_t v;
 
 void setup()
 {
-  dc.reset(PORT_1);
-  dc.run(0);
-  dc.reset(PORT_2);
-  dc.run(0);
-  dc.reset(PORT_3);
-  dc.run(0);
-  dc.reset(PORT_4);
-  dc.run(0);
+  v.set_speed(MBOT_SPEED_MID);
 }
 
 void loop()
 {
+  v.apply_direction(mbot::vehicle_t::direction_t::forward);
+  v.start();
+  delay(1000);
+
+  v.apply_direction(mbot::vehicle_t::direction_t::backwards);
+  v.start();
+  delay(1000);
+
+  v.apply_direction(mbot::vehicle_t::direction_t::left);
+  v.start();
+  delay(1000);
+
+  v.apply_direction(mbot::vehicle_t::direction_t::right);
+  v.start();
+  delay(1000);
+
+  v.stop();
 }
