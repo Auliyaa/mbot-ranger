@@ -11,6 +11,8 @@ void setup()
 
 void loop()
 {
+  // This example code applies various directions to the vehicle and let it run for some time.
+  // This will run only once and leave the vehicle stopped at the end.
   static bool first{true};
 
   if (first)
