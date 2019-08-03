@@ -9,12 +9,12 @@ namespace mbot
 /**
   * By default on the mBot ranger, the right motor is plugged into slot #1.
   */
-#define MBOT_RIGHT_MOTOR_SLOT SLOT1
+#define MBOT_RIGHT_MOTOR_SLOT SLOT_1
 
 /**
   * By default on the mBot ranger, the left motor is plugged into slot #2.
   */
-#define MBOT_LEFT_MOTOR_SLOT SLOT2
+#define MBOT_LEFT_MOTOR_SLOT SLOT_2
 
 /**
   * Around the minimum PWM value you could set on any motor.

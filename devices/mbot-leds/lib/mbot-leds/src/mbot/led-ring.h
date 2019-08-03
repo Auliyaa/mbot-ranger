@@ -7,7 +7,7 @@
 /**
   * On the mBot ranger, the LED ring is located on the PORT0.
   */
-#define MBOT_LED_RING_PORT PORT0
+#define MBOT_LED_RING_PORT PORT_0
 
 /**
   * On the mBot ranger, the LED ring is located on pin #44

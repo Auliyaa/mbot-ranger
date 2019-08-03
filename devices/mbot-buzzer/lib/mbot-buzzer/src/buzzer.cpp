@@ -2,9 +2,9 @@
 
 using namespace mbot;
 
-bool buzzer_t::open(int port)
+bool buzzer_t::open(int pin)
 {
-  _device.setpin(port);
+  _device.setpin(pin);
   return true;
 }
 
