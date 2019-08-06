@@ -61,7 +61,7 @@ void wall_e_t::check()
   for(int i=0; i<5; ++i)
   {
     buzzer.play(TONE_A4, 100);
-    display.show(sound_sensor.percent());
+    display.show(sound_sensor.read());
     delay(1000);
   }
   display.clear();
@@ -71,7 +71,7 @@ void wall_e_t::check()
   for(int i=0; i<5; ++i)
   {
     buzzer.play(TONE_A4, 100);
-    display.show(ultrasonic_sensor.distance());
+    display.show(ultrasonic_sensor.read());
     delay(1000);
   }
   display.clear();

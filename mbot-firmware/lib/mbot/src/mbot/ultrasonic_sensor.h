@@ -34,7 +34,7 @@ public:
     * The max parameter is indicated by the firmware as the max measureable distance. Whatever that means.
     * Leaving max to 0 will use a default max of 400 for cm, 180 for inches.
     */
-  double distance(unit_t u=unit_t::cm, uint16_t max=0);
+  double read(unit_t u=unit_t::cm, uint16_t max=0);
 
 private:
   MeUltrasonicSensor _device;

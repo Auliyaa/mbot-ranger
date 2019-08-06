@@ -7,7 +7,7 @@ ultrasonic_sensor_t::ultrasonic_sensor_t(uint8_t port)
 {
 }
 
-double ultrasonic_sensor_t::distance(mbot::ultrasonic_sensor_t::unit_t u, uint16_t max)
+double ultrasonic_sensor_t::read(mbot::ultrasonic_sensor_t::unit_t u, uint16_t max)
 {
   switch(u)
   {
