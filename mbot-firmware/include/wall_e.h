@@ -13,6 +13,7 @@
 #include <mbot/sound_sensor.h>
 #include <mbot/ultrasonic_sensor.h>
 #include <mbot/temperature_sensor.h>
+#include <mbot/line_sensor.h>
 
 #include <mbot/buzzer_tones.h>
 
@@ -44,6 +45,8 @@ struct wall_e_t
   mbot::ultrasonic_sensor_t ultrasonic_sensor;
   // /// Temperature sensor
   // mbot::temperature_sensor_t temperature_sensor;
+  /// Line detection sensor
+  mbot::line_sensor_t line_sensor;
 
   wall_e_t();
   virtual ~wall_e_t() = default;

@@ -7,8 +7,9 @@ wall_e_t::wall_e_t()
     display{PORT_10},
     light_sensor{PORT_11, PORT_12},
     sound_sensor{PORT_14},
-    ultrasonic_sensor{PORT_6}//,
-    // temperature_sensor{PORT0,0}
+    ultrasonic_sensor{PORT_6},
+    // temperature_sensor{PORT0,0},
+    line_sensor{PORT_9}
 {
 }
 
