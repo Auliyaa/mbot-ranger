@@ -86,4 +86,14 @@ void wall_e_t::check()
     display.show(light_sensor.read_right());
   }
   display.clear();
+
+  // DBG("Checking temperature sensor");
+  // buzzer.play(TONE_A4, 100);
+  // for(int i=0; i<5; ++i)
+  // {
+  //   buzzer.play(TONE_A4, 100);
+  //   display.show(temperature_sensor.read());
+  //   delay(1000);
+  // }
+  // display.clear();
 }

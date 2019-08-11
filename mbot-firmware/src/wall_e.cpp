@@ -1,13 +1,14 @@
 #include <wall_e.h>
 
 wall_e_t::wall_e_t()
-  : vehicle{MBOT_RIGHT_MOTOR_SLOT, MBOT_LEFT_MOTOR_SLOT},
+  : vehicle{SLOT_1, SLOT_2},
     servo{PORT_7},
-    led_ring{MBOT_LED_RING_PORT},
+    led_ring{PORT0},
     display{PORT_10},
-    light_sensor{MBOT_RIGHT_LIGHT_SENSOR_PORT, MBOT_LEFT_LIGHT_SENSOR_PORT},
-    sound_sensor{MBOT_SOUND_SENSOR_PORT},
-    ultrasonic_sensor{PORT_6}
+    light_sensor{PORT_11, PORT_12},
+    sound_sensor{PORT_14},
+    ultrasonic_sensor{PORT_6}//,
+    // temperature_sensor{PORT0,0}
 {
 }
 
